@@ -12,7 +12,7 @@ addButton.addEventListener("click",function(){
         li.innerHTML=inputbox.value;
         tasklist.appendChild(li);
         let span =document.createElement("span");
-        span.innerHTML="\u00D7"; // Unicode for multiplication sign
+        span.innerHTML="\u00D7"; 
         li.appendChild(span);
     }
     inputbox.value="";
@@ -24,8 +24,7 @@ tasklist.addEventListener("click",function(e){
         e.target.classList.toggle("checked");
         savedata();
     }
-    //toggle means to add the class if it is not present, or remove it if it is present
-    //classlist is a property of the element that returns a collection of the class names of the element
+    
 
     else if(e.target.tagName==="SPAN"){
         e.target.parentElement.remove();
